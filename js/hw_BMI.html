@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" style="padding: 10px;border: 1px solid gray; width: 250px;">
+        <label for="height">身高:</label>
+        <input type="text" id="height" style="margin-bottom: 10px;"><span> cm</span>
+        
+        <label for="weight">體重:</label>
+        <input type="text" id="weight" style="margin-bottom: 10px;"><span> kg</span>
+        
+        <input type="button" value="計算" id="btn">
+    </div>
+
+    <script>
+        
+        function showBody(){
+         let height = parseFloat(document.getElementById("height").value)/100;
+         let weight = parseFloat(document.getElementById("weight").value);
+         let bmi = weight/(height*height);
+            if(bmi<18.5){
+                alert("體重過輕");
+            }
+            else if(18.5<=bmi && bmi<24){
+                alert("正常範圍");
+            }
+            else if(24<=bmi && bmi<27){
+                alert("過重");
+            }
+            else if(27<=bmi && bmi<30){
+                alert("輕度肥胖");
+            }
+            else if(30<=bmi && bmi<35){
+                alert("中度肥胖");
+            }
+            else if(bmi>=35){
+                alert("重度肥胖");
+            }
+        console.log(typeof height);
+        console.log(typeof weight);
+        console.log(typeof bmi);
+        };
+        button = document.getElementById("btn");
+        button.addEventListener("click", showBody,false);
+
+    </script>
+
+</body>
+</html>

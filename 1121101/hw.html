@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>題目一</h2>
+<script>
+// @@@@@@@@@作業 01： 01temperature.html (變數與運算式)  
+// 寫程式，設定變數存放今天的攝氏温度(30)，請寫程式將其轉換成華氏温度，請將轉換的結果顯示在頁面上。註：華氏= (攝氏)(9/5) + 32
+var c =30; 
+f = c*1.8+32;
+document.write(f);
+</script>
+
+
+<h2>題目二</h2>
+<script>
+// @@@@@@@@@作業 02： 02expressint.html (變數與運算式)  
+// 寫程式，設定變數存放今天到目前為止所經過的秒數(比如8000秒)，請將其轉換成時分秒後顯示在頁面上。
+var t = 8000;
+hours = t/3600;
+minutes = (t/3600)/60;
+seconds = t%60;
+document.write(hours + "時" + minutes + "分" + seconds + "秒");
+</script>
+
+<h2>題目三</h2>
+<script>
+// @@@@@@@@@作業 04： 04orangeIf.html  (if練習) 
+// 寫程式，設定變數存放橘子一斤的單價，及購買的斤數，並算出小計為何,
+// 若消費金額超過500元, 則打九折
+var p = 200;
+var k = 10;
+var total = p*k;
+if(total>500){
+    total = total*0.9;
+}
+document.write(total);
+</script>
+
+<h2>題目四</h2>
+<script>
+// @@@@@@@@@作業 05：05orangeIf_2.html (if練習) 
+// 寫程式，設定變數存放一斤的單價，及購買的斤數，並算出小計為何,
+// 若消費金額超過500元, 則打九折,
+// 若消費金額超過1000元, 則打七折
+var p = 10;
+var k = 60;
+var total = p*k;
+if(total>=1000){
+    total*=0.7;
+}else if(total>=500){
+    total*=0.9;
+}
+document.write(total);
+</script>
+
+<h2>題目五</h2>
+<script>
+// @@@@@@@@@作業 06：06orangeIf_3.html (if、switch練習)  
+// 橘子的單價和等級的關係如下:
+// 寫程式，設定變數存放所購買的等級及公斤數，並算出小計
+var level = 2;
+var kilo = 200;
+
+
+if(kilo<=40){
+    switch(level){
+    case 1:
+        price = 30;
+        break;
+    case 2:
+        price = 25;
+        break;
+    case 3:
+        price = 20;
+        break;    
+}
+}
+else if(kilo<=100){
+    switch(level){
+    case 1:
+        price = 25;
+        break;
+    case 2:
+        price = 20;
+        break;
+    case 3:
+        price = 15;
+        break;    
+}
+}
+else if(kilo>100){
+    switch(level){
+    case 1:
+        price = 20;
+        break;
+    case 2:
+        price = 15;
+        break;
+    case 3:
+        price = 10;
+        break;    
+}
+}
+total = kilo*price;
+document.write(total);
+</script>
+
+
+<h2>題目六</h2>
+<script>
+// @@@@@@@@@作業 07　 07forSum.html (迴圈..練習) 
+// 寫程式，設定變數存放一個正整數,並算1 到此整數間的總和、奇數和、偶數和
+var i = 1;
+var sum = 0;
+var oddsum = 0;
+var evensum = 0;
+
+while(i<=10){
+    sum = sum + i;
+    if(i%2===1){
+        oddsum = oddsum + i;
+    }
+    else{
+        evensum = evensum + i;
+    }
+    i = i +1;    
+}
+document.write("總和"+sum+"<br>");
+document.write("奇數和"+oddsum+"<br>");
+document.write("偶數和"+evensum+"<br>");
+
+</script>
+
+<script>
+    var sum = 0;
+    var oddsum = 0;
+    var evensum = 0;
+    
+    for(var i=1; i<=10; i++){
+        sum = sum + i;
+        if(i%2===1){
+            oddsum = oddsum + i;
+        }
+        else{
+            evensum = evensum + i;
+        }   
+    }
+    document.write("總和"+sum+"<br>");
+    document.write("奇數和"+oddsum+"<br>");
+    document.write("偶數和"+evensum+"<br>");
+    
+    </script>
+
+<h2>題目十</h2>
+<script>
+// @@@@@@@@@作業10  10nestedLoopStar.html： (巢狀迴圈練習) 
+// 印出
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+var s = "";
+var y = "*"
+for(i=1; i<=6 ; i++){
+    s = s + y;
+    document.write(s+"<br>");
+}
+</script>
+
+<h2>題目十一</h2>
+<script>
+// @@@@@@@@@作業11  11nestedLoopStar.html： (巢狀迴圈練習)  
+// 印出
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *****
+// ****
+// ***
+// **
+// *
+var s = "";
+var y = "*"
+for(i=1; i<=6 ; i++){
+    s = s + y;
+    document.write(s+"<br>");
+}  
+</script>
+
+
+<script>
+var s = "";
+for(i=1; i<=6 ; i++){
+    s = s + i;
+    document.write(s+"<br>");
+} 
+</script>
+
+
+ 
+</body>
+</html>

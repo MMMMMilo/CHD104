@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var c=12;
+        var f=c*1.8+32
+        document.write("溫度:", f ,"<br>");
+
+        
+        var t = 8000;
+        //計算小時
+        var hours = t/3600;
+        var minutes = (t%3600)/60;
+        var second = minutes%60;
+        document.write("時間是:",hours,"小時"+minutes,"分"+second,"秒","<br>");
+
+
+        var sum=0
+        for(let i=1 ; i<=1000; i++){
+            sum+=i;
+            if(sum>1000){
+                document.write(`1加到 ${i} 等於 ${sum}大於1000<br>`)
+                break;
+            }
+        }
+
+        
+        
+
+    </script>
+
+
+</body>
+</html>

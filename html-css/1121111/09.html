@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 500px;
+            height: 100px;
+            background-color: aquamarine;
+            border-radius: 600px;
+            margin: 50px;
+
+            box-shadow: 0px 0px 5px -10px black;
+
+            transition: 1s;
+            position: relative;
+            top: 0px;
+            /* box-shadow: 0 1px 0 #666,
+                        0 2px 0 #777,
+                        0 3px 0 #888,
+                        0 4px 0 #999,
+                        0 5px 0 #aaa,
+                        0 6px 0 #bbb,; */
+        }
+        .box:hover{
+            top: -20px;
+            box-shadow: 0 40px 5px -10px black;
+            /* top:3px
+            box-shadow: 0 1px 0 #666,
+                        0 2px 0 #777,
+                        0 3px 0 #888,
+                        0 4px 0 #999,
+                        0 5px 0 #aaa,
+                        0 6px 0 #bbb,; */
+        }
+
+        button{
+            border: none;
+            margin: 50px;
+            padding: 10px 30px;
+            background-color:blueviolet;
+            color: #fff;
+            border-radius: 200px;
+            position: relative;
+            top: 0;
+            transition: .5s;
+            box-shadow: 0px 1px 0px #666,
+                        0px 2px 0px #777,
+                        0px 3px 0px #888,
+                        0px 4px 0px #999,
+                        0px 5px 0px #aaa,
+                        0px 6px 0px #bbb;
+        }
+        button:hover{
+            top: 3px;
+            box-shadow: 0px 1px 0px #666,
+                        0px 1px 0px #777,
+                        0px 2px 0px #888,
+                        0px 2px 0px #999,
+                        0px 3px 0px #aaa,
+                        0px 3px 0px #bbb;
+
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <div class="box"></div>
+    <button>click me</button>
+    
+</body>

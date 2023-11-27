@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+    .box{
+        width: 300px;
+        height: 300px;
+        margin: 20px;
+        font-size: 20px;
+        border-radius: 50%;
+        background-color: aquamarine;
+        position: relative;
+    }
+    @keyframes go {
+        0%{
+            left: 0; 
+        }
+        100%{
+            left: 150px;
+        } 
+    }
+    @keyframes gogo{
+        0%{left:0; top: 0;}
+        50%{left:150px; top: 150px;}
+        100%{left:300px; top: 0;}
+    }
+    .box1{
+        /* animation: go .1s 3; */
+        animation: go 1s 0s ease infinite alternate;
+                   /* 名稱 時間 延遲(等待多久開始撥放) 轉變速度  持續時間 方向 */
+    }
+    .box2{
+        /* animation: go .3s; */
+        animation: go 1s 0s ease infinite alternate-reverse;
+    }
+    .box3{
+        animation: gogo 5s 0s infinite alternate-reverse;
+    }
+    .bell{
+        width: 100px;
+        height: 100px;
+        margin: 50px;
+        animation: rr .1s linear infinite alternate,
+                   jj .5s linear infinite alternate;
+        transform-origin: center 10px;
+    }
+    .bell img{
+        width: 100%;
+    }
+    @keyframes rr{
+        0%{rotate:-20deg;}
+        100%{rotate:20deg;}
+    }
+    @keyframes jj{
+        0%{translate:0px 0%;}
+        100%{translate:0px 50%;}
+    }
+   </style>
+
+</head>
+<body>
+    <div class="box box1">A</div>
+    <div class="box box2">B</div>
+    <div class="box box3">c</div>
+
+    <div class="bell">
+        <img src="/1121112/bell.jpg" alt="">
+    </div>
+
+</body>
+</html>

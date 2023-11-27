@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card{
+            width: 280px;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 50px;
+            position: relative;
+        }
+        .card .leble{
+            background-color: red;
+            color: white;
+            padding:5px;
+            position: absolute;
+            top: 20px;
+            left: -8px;
+        }
+        .card .leble::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 8px solid black;
+            border-left: 8px solid transparent;
+            left: 0;
+            /* bottom: -7px; */
+            top: 100%;
+            position: absolute;
+
+        }
+
+        .sale{
+            position: absolute;
+            right: 0;
+            top: 0;
+            background-color: red;
+            line-height: 2;
+            width: 38px;
+            /* 為什麼要縮2px不是1px */
+            text-align: center;
+        }
+        .sale::after{
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-right: 20px solid blue;
+            border-left: 20px solid blue;
+            border-bottom: 20px solid transparent;
+            left: 0;
+            top: 100%;
+        }
+
+        .card img{
+            width: 100%;
+        }
+
+        .arrow{
+            width: 0;
+            height: 20px;
+            border-right: 10px solid red;
+            border-left: 10px solid red;
+            border-bottom: 10px solid transparent;
+        }
+
+
+        p{
+            background-color: ;
+            font-size: 32px;
+        }
+        p::before{
+            content: 'before';
+            color: red;
+        }
+        p::after{
+            content: 'after';
+            color: red;
+        }
+
+        .box{
+            background-color: #f00;
+            width: 300px;
+            margin: 100px;
+            overflow: hidden;
+        }
+        .box img{
+            scale: 1;
+            transition: 1s;
+            /* vertical-align: top; */
+        }
+        .box:hover img{
+            scale: 1.4;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="card">
+        <div class="sale">3.7折</div>
+        <div class="leble">
+            店到店
+        </div>
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=10"></div>
+        <div class="txt">
+            <h3>title</h3>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aut asperiores id architecto fugit iste! Quibusdam dicta nihil nemo eum non.
+        </div>
+    </div>
+
+    <p>內容</p>
+
+    <div class="arrow"></div>
+
+    <div class="box">
+        <img src="https://picsum.photos/300/200/?random=10">
+    </div>
+
+</body>
+</html>

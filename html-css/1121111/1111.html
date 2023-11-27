@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .card{
+            width: 300px;
+            height: 500px;
+            background-color: #fff;
+            box-shadow: 0px 2px 10px 0 #999;
+            margin: 20px;
+            position: relative;
+        }
+        .card img{
+            width: 100%;
+        }
+
+        .text{
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+        }
+
+        .card .text .discount{
+            display: flex;
+        }
+        .card .text .discount .discount-price{
+            background-color: #f70;
+            color: #fff;
+            padding: 5px;
+            margin-right: 5px;
+        }
+        .card .text .discount .discount-percentage{
+            border: 2px solid #f70;
+            color: #f70;
+            padding: 5px;
+        }
+        .card .text .discount p{
+            color: #777;
+        }
+        .card .text p span{
+            color: #f70;
+            font-size: 30px;
+            font-weight: 400;
+        }
+
+
+        .card .lebel{
+            position: absolute;
+            top: 10px;
+            left: -8px;
+        }
+        .card .lebel .item-bonus{
+            color: #fff;
+            background-color: #f20;
+            padding: 5px;
+            margin-top: 10px;
+            border-radius: 0 5px 5px 0;
+            position: relative;
+        }
+        .card .lebel .item-bonus::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-top: 8px solid #622;
+            border-left: 8px solid transparent;
+            position: absolute;
+            left: 0;
+            top: 100%;
+        }
+        .card .lebel-price{
+            color: #f70;
+            font-size: 18px;
+            font-weight: 600;
+            background-color: #fd0;
+            border-radius: 5px 0 0 5px;
+            padding: 5px;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .card .lebel-festivel{
+            display: flex;
+            position: absolute;
+            bottom: 200px;
+        }
+        .card .lebel-festivel .item-date{
+            background-color: #f20;
+            color: #fff;
+            font-weight: 600;
+            font-size: 32px;
+            padding: 5px;
+        }
+        .card .lebel-festivel .item-ticket{
+            background-color: #fd0;
+            color: #f20;
+            padding: 5px;
+            line-height: 42px;
+        }
+        .card .lebel-festivel .item-shipping{
+            background-color: #090;
+            color: #fff;
+            padding: 5px;
+        }
+        .card .lebel-festivel .item-shipping::after{
+            content: "";
+            width: 0;
+            height: 0;
+            border-bottom: 55px solid #090;
+            border-right: 15px solid transparent;
+            position: absolute;
+            bottom: 0px;
+            right: -15px;
+
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="card">
+        <!-- <div class="play"></div> -->
+        <div class="lebel">
+            <div class="item-bonus">商城旗艦店</div>
+            <div class="item-bonus">10%蝦幣回饋</div>
+        </div>
+        <div class="lebel-price">8.8折</div>
+        <div class="lebel-festivel">
+            <div class="item-date">11.11</div>
+            <div class="item-ticket">蝦卷<span>8</span>折起</div>
+            <div class="item-shipping">超商取貨<br>全店面運0起</div>
+        </div>
+        <div class="pic">
+            <img src="https://picsum.photos/300/300/?random=10">
+        </div>
+        <div class="text">
+            <h3>DOUGHNUT-大容量後背包/防潑水/減壓背帶後背包/電腦包/多...</h3>
+            <div class="discount">
+                <div class="discount-price">滿額折$201</div>
+                <div class="discount-percentage">2件8.5折</div>
+            </div>
+            <p><del>$2380</del> <span>$2,095</span></p>
+        </div>
+    </div>
+
+</body>
+</html>

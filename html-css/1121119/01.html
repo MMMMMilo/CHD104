@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            /* max-width: 1200px; */
+            margin: auto;
+            display: flex;
+            flex: wrap;
+            border: 1px solid #f00;
+        }
+        .box{
+            height: 200px;
+            background-color: aquamarine;
+            /* width: 47.5%;
+            margin: 1.25%; */
+            width: calc(100%/2 - 15px*2);
+            margin: 15px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box">1</div>
+        <div class="box">2</div>
+    </div>
+</body>
+</html>

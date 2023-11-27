@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>event handler</title>
+</head>
+
+<body>
+
+<input type="button" name="btn" value="10+20=?[0]">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[1]">&nbsp;&nbsp;
+<input type="button" name="btn" value="10+20=?[2]">&nbsp;&nbsp;  
+
+<script>
+
+    function showAns(){
+        var a=10;
+        var b=10;
+        window.alert(a+b);
+    }
+
+    function noAns(){
+        window.alert("不告訴你!");
+    }
+
+    function showSmile(){
+        count++;
+        window.alert(":))))))))))))");
+        if (count===3){
+            btns[2].removeEventListener("click", showSmile, false);
+        }
+    }
+
+    var btns = document.getElementsByName("btn");
+    var count = 0
+
+    //物件.on事件名稱=事件處理程序 一個物件只能有一個事件處理
+    btns[1].onclick = showAns;//會被後面覆蓋掉
+    btns[1].onclick = noAns;
+    //事件名稱,事件處理程序,useCapture  增加事件監聽器，同一物件可以有不同事件
+    btns[2].addEventListener("click", showAns, false);
+    btns[2].addEventListener("click", showSmile, false);
+
+
+</script>
+
+
+
+</body>
+</html>

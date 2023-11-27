@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .main-nav{
+            width: 80%;
+            background-color: rosybrown;
+        }
+        .main-nav input[type="checkbox"]{
+            display: none;
+        }
+        .sub-menu{
+            /* display: none; */
+            width: 100%;
+            background-color: red;
+            box-shadow: 0px 8px 8px #0003 inset,
+                        0px -8px 8px #0003 inset;
+
+            max-height: 0vh;
+            overflow: hidden;
+            transition: max-height 1s;
+        }
+        .sub-menu li{
+            padding-left: 1em;
+            opacity: 0;
+            translate: -20px 0;
+        }
+        .main-nav input[type="checkbox"]:checked ~ .sub-menu{
+            /* display: block; */
+            max-height: 100vh;  
+        }
+        .main-nav input[type="checkbox"]:checked ~ .sub-menu li{
+            translate: 0px 0px;
+            opacity: 1;
+        }
+        .main-nav input[type="checkbox"]:checked ~ .sub-menu li:nth-child(1){
+            transition: .5s .1s;
+        }
+
+        .main-nav ul.main-menu li{
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            border-bottom: 1px solid #fff;
+        }
+
+        .main-nav ul.main-menu li a{
+            display: block;
+            text-decoration: none;
+            padding: 10px;
+            color: #fff;
+            box-sizing: border-box;
+            width: calc(100% - 30px);
+        }
+        .main-nav ul.main-menu li .icon{
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: darkgreen;
+
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-nav">
+        <ul class="main-menu">
+            <li><a href="#">link</a></li>
+            <li>
+                <a href="#">link</a>
+                <input type="checkbox" name="" id="sub-switch-2">
+                <label for="sub-switch-3" class="icon">▼</label>
+                <ul class="sub-menu">
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">link</a>
+                <input type="checkbox" name="" id="sub-switch-3">
+                <label for="sub-switch-3" class="icon">▼</label>
+                <ul class="sub-menu">
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                    <li><a href="#">sub-link</a></li>
+                </ul>
+            </li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</body>
+</html>

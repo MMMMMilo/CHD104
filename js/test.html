@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    var priceArr = [450, 320, 600, 200, 700];
+    var arr = priceArr.filter(priceArr=>priceArr<500)
+    document.write(arr+"<br>");
+
+        function getArea(radius){
+            var ans = radius*radius*3.14;
+            return ans;
+        }
+        document.write(getArea(1));
+    </script>
+
+    <script>
+        var getArea = function (radius) {
+	        return radius*radius*3.14;
+        }
+        document.write(getArea(1));
+    </script>
+
+    <h2>練習</h2>
+    <!-- <script>
+        let n1=prompt("請輸入一個數字","");
+        let n2=prompt("請輸入一個數字","");
+        let result=n1*n2;
+        console.log(result);
+    </script> -->
+    <!-- <script>
+        let money = prompt("要領多少錢","");
+        if(money<100){
+            console.log("太少了不能領");
+        }else if(money<=100000){
+            console.log("OK");
+        }else{
+            console.log("太多了不能領");
+        }
+        console.log("判斷式結束");
+    </script> -->
+    <!-- <script> 
+        let result = 0;
+        for(let i=1; i<=10; i++){
+            result+=i;
+        }
+        console.log(result);
+    </script> -->
+    
+    <!-- <script>
+        function divide(n1,n2){
+            let result = n1/n2;
+            console.log(result);
+            return "hello"
+        }
+        divide(4,2);
+       
+    
+        function divide(n1,n2){
+            let result = n1/n2;
+            return result;
+        }
+        let answer = divide(4,2);
+        console.log(answer);
+    
+    </script> -->
+    
+    <!-- <script>
+        //建立陣列物件
+        let grades = [85,90,100];
+        grades.push(25);
+        grades.push(40);
+        grades.push(50);
+        console.log(grades[0]);
+        console.log(grades[1]);
+        console.log(grades[2]);
+        console.log(grades[3]);
+        console.log(grades[4]);
+        console.log(grades.length);
+        //for迴圈，逐一取得陣列資料
+        let ans = 0;
+        for(i=0; i<grades.length; i++){
+            ans = ans + grades[i];
+        }
+        console.log(ans);
+        let avg = ans/grades.length;
+        console.log(avg);
+    </script> -->
+    
+    <!-- <script>
+        document.write(Math.round(Math.random()*10)+"<br>");
+        var score = [80,60,90,100];
+        document.write(score[0]);
+        document.write("<br>");
+    </script> -->
+    
+<!--     
+    <script>  
+            let number = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9],
+            [0]
+        ];
+        for(let q=0; q<number.length; q++){
+            for(let w=0; w<number[q].length; w++){
+                document.write(number[q][w]); 
+            }
+            document.write("<br>");
+        }
+     -->
+
+
+    </script>
+
+
+
+</body>
+</html>

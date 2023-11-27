@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style>
+        caption{
+            font-size: 20px;
+
+        }
+        table{
+            border: 1px solid;
+            border-collapse: collapse;
+            margin: auto;
+            width: 500px;
+            position: relative;
+        }
+        table::before{
+            content: "";
+            border: 2px solid black;
+            position: absolute;
+            width: 503px;
+            height: 568px;
+            top: 50px;  
+            left: -4px;        
+        }
+        th,td{
+            border: 1px solid;
+            text-align: center;
+            padding: 4px;
+            /* width: 80px; */
+            height: 40px;
+        }
+        th{
+            font-weight:lighter ;
+        }
+        td{
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <caption>台南市七股區民小學一O九年度<br>四年甲班 一週作息表</caption>
+    <thead>
+        <tr>
+            <th>時間</th>
+            <th><small>星期<br>節次</th>
+            <th>一</th>
+            <th>二</th>
+            <th>三</th>
+            <th>四</th>
+            <th>五</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th>8:50~9:30</th>
+            <td>1</td>
+            <td>英語</td>
+            <td>自然</td>
+            <td>數學</td>
+            <td></td>
+            <td>國語</td>
+        </tr>
+        <tr>
+            <th>9:40~10:20</th>
+            <td>2</td>
+            <td>英語<br>(彈性)</td>
+            <td>自然</td>
+            <td>國語</td>
+            <td></td>
+            <td>數學</td>
+        </tr>
+        <tr>
+            <th>10:30~11:10</th>
+            <td>3</td>
+            <td>國語</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>社會</td>
+        </tr>
+        <tr>
+            <th>11:20~12:00</th>
+            <td>4</td>
+            <td>社會</td>
+            <td></td>
+            <td></td>
+            <td>自然</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>12:00~13:20</th>
+            <th colspan="6">午餐 刷牙 午休 時間</th>
+
+        </tr>
+        <tr>
+            <th>13:30~14:10</th>
+            <td>5</td>
+            <td>數學</td>
+            <td></td>
+            <td rowspan="4"></td>
+            <td>國語</td>
+            <td>社會</td>
+        </tr>
+        <tr>
+            <th>14:20~15:00</th>
+            <td>6</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>15:10~15:50</th>
+            <td>7</td>
+            <td></td>
+            <td>國語<br>(閱讀)</td>
+
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>15:50~16:00</th>
+            <td colspan="3"></td>
+            <td colspan="2"></td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="7">
+                (如有異動會公佈)<br>(空堂時間，請找~學校網頁最上面~主題網站~<br>七股國小防疫網，利用線上課自主學習)
+            </td>
+        </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>

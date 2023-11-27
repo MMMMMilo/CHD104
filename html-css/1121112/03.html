@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid{
+            border: 2px solid #0f0;
+            width: 600px;
+            height: 600px;
+            display: grid;
+            /* grid-template-columns: 100px 100px 200px; */
+            grid-template-columns: repeat(5,100px);
+            /* 4個欄,幾分之幾(分數) */
+            grid-template-rows:repeat(5,100px);
+            gap: 10px;
+            /* justify-content: ;
+            align-content: ;
+            justify-items: ;
+            align-items: ; */
+        }
+        .item{
+            /* width: 50px;
+            height: 50px; */
+            background-color: #f00;
+        }
+        .item:nth-child(1){
+            background-color: aqua;
+            /* justify-self: end;
+            align-self: end; */
+            /* justify-items: end; */
+            grid-column: 2/3;
+            grid-row:2/6;
+            z-index: 1;
+        }
+        .item:nth-child(2){
+            background-color: aquamarine;
+            /* grid-column: 1/4;
+            grid-row:3/4; */
+            grid-column:1/span 3;
+            grid-row:3/span 2;
+
+        }
+        .item:nth-child(3){
+            background-color: #f00;
+            /* grid-column: 4/6;
+            grid-row:4/-1; */
+            grid-area:4/4/-1/-1 ;
+
+        }
+
+        .wrap{
+            width: 500px;
+            height: 500px;
+            border: 2px solid #f00;
+            display: grid;
+            grid-template-areas: 
+                'header header footer'
+                'main main footer'
+                'main main footer'
+            ;
+        }
+        .box1{
+            grid-area: header;
+            background-color: antiquewhite;
+        }
+        .box2{
+            grid-area: main;
+            background-color: aqua;
+        }
+        .box3{
+            grid-area: footer;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <div class="wrap">
+        <div class="box1">header</div>
+        <div class="box2">main</div>
+        <div class="box3">footer</div>
+    </div>
+
+</body>
+</html>

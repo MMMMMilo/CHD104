@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main-header{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: grey;
+        }
+       .logo img{
+            vertical-align: top;
+        }
+/* ------------------------------------------------ */
+        .hb{
+            width: 30px;
+            height: 30px;
+            background-color: brown;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .hb span{
+            width: 80%;
+            height: 2px;
+            margin: 3px auto;
+            background-color: #fff;
+        }
+        @media (width >=768px){
+            .hb{
+                display: none;
+            }
+        }
+/* ------------------------------------------------ */            
+        .main-nav{
+            width: 100%;
+            display: none;
+            background-color: #fa0;
+        }
+        #manu-switch{
+            display: none;
+        }
+        @media(width>=768px){
+            .main-nav{
+                width: auto;
+                display: block;
+                background-color: transparent;
+            }
+        }
+/* ------------------------------------------------ */
+        .main-nav a{
+            text-decoration: none;
+            color: black;
+            padding: 10px;
+        }
+        @media(width>=768px){
+            .main-nav a{
+                display: inline-block;
+            }
+        }
+        @media(width<768px){
+            #manu-switch:checked ~ .main-header .main-nav{
+            display: block;
+            }
+            .main-nav a{
+            display: block;
+            }
+            .main-nav a+a{
+            border-top: 1px solid #fff;
+            }
+        }
+        
+
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="" id="manu-switch">
+    <div class="main-header">
+        <div class="logo">
+            <a href="#">
+                <img src="https://fakeimg.pl/80x40/200">
+            </a>
+        </div>
+        <label for="manu-switch" class="hb">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+        <nav class="main-nav">
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+            <a href="#">link</a>
+        </nav>
+    </div>
+
+    <!-- <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium error quibusdam possimus laborum incidunt inventore atque maxime voluptatibus odit, aliquam tempore libero asperiores ex illo. Obcaecati perspiciatis unde ea odio.</p>
+    <p>Nobis reprehenderit, deserunt quam impedit ad debitis repudiandae architecto sequi! Voluptatibus aperiam ut facilis dicta doloribus, facere placeat. Enim tenetur inventore dolor adipisci, voluptate non nihil quis quod fugit illum.</p>
+    <p>Modi beatae blanditiis expedita reiciendis officiis vel assumenda eligendi. Voluptatum earum eaque voluptatem repellendus autem eligendi ex facere quam. Iusto minus dolores nobis animi illum ipsam ut id voluptatibus cupiditate.</p>
+    <p>Exercitationem, ratione in. Placeat atque, distinctio minus, excepturi optio amet modi delectus ut vitae, tempora odio error soluta earum qui sit quo alias. Fuga dignissimos corporis voluptate porro id. Modi?</p>
+    <p>Beatae atque dicta iure voluptatum ipsam necessitatibus. Unde voluptatem dicta rerum cupiditate, autem non magni itaque mollitia nisi magnam odio ullam soluta, expedita repellendus beatae est natus quam accusamus suscipit?</p>
+    <p>Nobis voluptatibus hic illum rerum ex facilis labore ducimus, eum iusto aspernatur repudiandae culpa porro mollitia possimus blanditiis fuga laboriosam quae sit! Cum dolore eum nesciunt et placeat, quidem aliquam.</p>
+    <p>Beatae nisi inventore velit sint, quos cum vitae dolor maiores dicta assumenda recusandae voluptatibus, soluta neque, aperiam officia sit veritatis? Similique autem voluptate, fugit reiciendis quae quos amet maxime ipsa!</p>
+    <p>Quam, necessitatibus. Soluta tenetur tempora saepe exercitationem dolores nemo aliquid nobis excepturi, quam consequatur laborum sed vitae minus consequuntur. Totam beatae deserunt nobis aliquid earum ex voluptate neque corrupti aspernatur.</p>
+    <p>Excepturi autem at dicta in, laboriosam deleniti cum tempora expedita, impedit animi sed, reiciendis aspernatur unde sunt dolorem. Veniam reiciendis, illum aperiam quos repellendus maxime sed animi quas dicta fugiat!</p>
+    <p>Eligendi commodi est at doloribus repellat totam quam neque molestiae ab accusantium, ipsa, tempore in ea sunt maxime perspiciatis voluptatibus eius fugiat tempora ullam natus beatae. Perferendis, hic? Molestiae, enim?</p>
+    <p>Ullam, odio corrupti suscipit iste sequi explicabo, aspernatur excepturi debitis sint tenetur cupiditate tempora, quia voluptas totam facilis cum voluptatibus! Incidunt esse harum fugiat suscipit, ullam libero quae ratione mollitia.</p>
+    <p>Placeat unde id corporis esse. Sit temporibus necessitatibus quidem a delectus soluta iure laudantium, aliquam quae in, doloribus fugiat molestias. Modi incidunt quo libero et repellendus reprehenderit laborum dignissimos a?</p>
+    <p>Voluptates, ab. Voluptate reiciendis harum perferendis quos, dolorem sapiente accusantium magni. Minima ad corporis officia, officiis laudantium sed unde eveniet tempore aspernatur quibusdam tenetur voluptatibus ipsum. Libero, rerum quasi. Provident.</p>
+    <p>Eos eveniet, a quia asperiores in obcaecati ad sunt perspiciatis cumque doloribus laborum veniam, sed inventore, repellat ab labore esse quos. Praesentium quaerat aliquid ex, numquam eum saepe eos facilis?</p>
+    <p>Obcaecati sapiente dolorum blanditiis ducimus aliquid. Expedita, magnam. Harum, nam! Ratione, facere eaque quasi quibusdam doloribus assumenda quam fuga dolorem sunt minima, voluptatum nobis impedit consectetur autem! Impedit, nisi amet.</p>
+    <p id="box">人體教授一聲還是標題登陸會議伺服器，怎麼樣眼中知識演出允許回應當年創作，喜愛自己的負責人像素據說就像死了寫作，違反四周笑道疾病老大，太麻里所謂財政不知人類奇蹟整合明年儘管並不尤其整理作業水果，力量以及無比有所民國還可以環節，突破之中不斷，充分鏡頭一副，不。</p>
+    <p>Est quaerat eius eaque in esse earum, necessitatibus ipsam ut iste, repellat non fugit cumque delectus sunt explicabo suscipit ducimus odio maxime, debitis pariatur commodi! Voluptates fuga cupiditate dolorum doloribus!</p>
+    <p>Repellat a quidem consequuntur debitis unde rerum deserunt odio voluptatum possimus accusamus? Quaerat consequatur praesentium ab reprehenderit odit a at consectetur beatae ut, obcaecati repellendus est provident sed veniam corrupti.</p>
+    <p>Aliquam, assumenda. Dignissimos temporibus animi suscipit non assumenda esse id exercitationem pariatur aliquid, vel eius doloribus dicta, quod laudantium odio doloremque sequi reprehenderit voluptatibus. Nihil amet asperiores mollitia in iste?</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p>
+    <p>Iusto dolores ab animi facilis consequuntur fuga nostrum delectus autem maxime? Optio eius harum quaerat enim, reprehenderit esse distinctio soluta, quia delectus reiciendis nam. Culpa eos consequuntur veniam sint nobis!</p> -->
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a{
+            display: inline-block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: blue;
+        }
+        @media screen and (hover:none){
+            a{
+                background-color: darkgoldenrod;
+            }
+        }
+        @media screen and (hover:hover){
+            a{
+                background-color: red;
+            }
+        }
+
+/* 
+        body{
+            background-color: black;
+        } */
+        .box1{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            background-image: linear-gradient(to top,transparent 0%, #fff 100%);
+        }
+        .box2{
+            width: 300px;
+            height: 300px;
+            background: brown;
+            background-image: linear-gradient(to top,transparent 0%, #fff 100%);
+        }
+        .box3{
+            width: 300px;
+            height: 300px;
+            background-color: rgba(254, 254, 254, 0.5); 
+            background-image: radial-gradient( rgba(254,254,254,0) 30%, rgba(255,255,255,0.7) 200%);
+        }
+
+
+        .card{
+            --padding:10px;
+            --radious:50px;
+            --border-width:1px;
+            width: 300px;
+            padding: var(--padding);
+            border: var(--border-width) solid red;
+            border-radius: var(--radious);
+        }
+        .pic{
+            border-radius: calc(var(--radious) - var(--padding) - var(--border-width));
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            background-color: blue;
+        }
+        img{
+            width: 100%;
+            vertical-align: middle;
+            display: block;
+            object-fit: cover;
+            object-position: center top;
+        }
+
+    </style>
+</head>
+<body>
+    <a href="#">link</a>
+
+
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+
+
+    <div class="card">
+        <div class="pic">
+            <img src="https://picsum.photos/300/200/?random=10">
+        </div>
+    </div>
+    <div class="card">
+        <div class="pic">
+            <img src="https://picsum.photos/100/300/?random=10">
+        </div>
+    </div>
+
+    
+</body>
+</html>

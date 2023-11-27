@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h2>題目一</h2>
+<script>
+// @@@@@@@@@作業 01： 01temperature.html (變數與運算式)  
+// 寫程式，設定變數存放今天的攝氏温度(30)，請寫程式將其轉換成華氏温度，請將轉換的結果顯示在頁面上。註：華氏= (攝氏)(9/5) + 32
+var c =30; 
+f = c*1.8+32;
+document.write(f);
+</script>
+
+
+<h2>題目二</h2>
+<script>
+// @@@@@@@@@作業 02： 02expressint.html (變數與運算式)  
+// 寫程式，設定變數存放今天到目前為止所經過的秒數(比如8000秒)，請將其轉換成時分秒後顯示在頁面上。
+var time = 8000;
+
+hours = parseInt(time/3600);
+minutes = parseInt((time%3600)/60);
+seconds = parseInt((time%3600)%60);
+document.write(hours + "時" + minutes + "分" + seconds + "秒");
+</script>
+
+<h2>題目四</h2>
+<script>
+// @@@@@@@@@作業 04： 04orangeIf.html  (if練習) 
+// 寫程式，設定變數存放橘子一斤的單價，及購買的斤數，並算出小計為何,
+// 若消費金額超過500元, 則打九折
+var price = 200;
+var kilo = 10;
+var total = price*kilo;
+if(total>500){
+    total = total*0.9;
+}
+document.write(total);
+</script>
+
+<h2>題目五</h2>
+<script>
+// @@@@@@@@@作業 05：05orangeIf_2.html (if練習) 
+// 寫程式，設定變數存放一斤的單價，及購買的斤數，並算出小計為何,
+// 若消費金額超過500元, 則打九折,
+// 若消費金額超過1000元, 則打七折
+var priceTwo = 10;
+var kiloTwo = 60;
+var totalTwo = priceTwo*kiloTwo;
+if(totalTwo>=1000){
+    totalTwo*=0.7;
+}else if(totalTwo>=500){
+    totalTwo*=0.9;
+}
+document.write(totalTwo);
+</script>
+
+<h2>題目六</h2>
+<script>
+// @@@@@@@@@作業 06：06orangeIf_3.html (if、switch練習)  
+// 橘子的單價和等級的關係如下:
+// 寫程式，設定變數存放所購買的等級及公斤數，並算出小計
+var orangeLevel = 3;
+var orangeKilo = 200;
+
+
+if(orangeKilo<=40){
+    switch(orangeLevel){
+    case 1:
+        price = 30;
+        break;
+    case 2:
+        price = 25;
+        break;
+    case 3:
+        price = 20;
+        break;    
+}
+}
+else if(orangeKilo<=100){
+    switch(orangeLevel){
+    case 1:
+        price = 25;
+        break;
+    case 2:
+        price = 20;
+        break;
+    case 3:
+        price = 15;
+        break;    
+}
+}
+else if(orangeKilo>100){
+    switch(orangeLevel){
+    case 1:
+        price = 20;
+        break;
+    case 2:
+        price = 15;
+        break;
+    case 3:
+        price = 10;
+        break;    
+}
+}
+OrangeTotal = orangeKilo*price;
+document.write(OrangeTotal);
+</script>
+
+
+<h2>題目七</h2>
+<script>
+// @@@@@@@@@作業 07　 07forSum.html (迴圈..練習) 
+// 寫程式，設定變數存放一個正整數,並算1 到此整數間的總和、奇數和、偶數和
+var i = 1;
+var sum = 0;
+var oddsum = 0;
+var evensum = 0;
+
+while(i<=10){
+    sum = sum + i;
+    if(i%2===1){
+        oddsum = oddsum + i;
+    }
+    else{
+        evensum = evensum + i;
+    }
+    i = i +1;    
+}
+document.write("總和"+sum+"<br>");
+document.write("奇數和"+oddsum+"<br>");
+document.write("偶數和"+evensum+"<br>");
+
+</script>
+
+<script>
+    var sum = 0;
+    var oddsum = 0;
+    var evensum = 0;
+    
+    for(var i=1; i<=10; i++){
+        sum = sum + i;
+        if(i%2===1){
+            oddsum = oddsum + i;
+        }
+        else{
+            evensum = evensum + i;
+        }   
+    }
+    document.write("總和"+sum+"<br>");
+    document.write("奇數和"+oddsum+"<br>");
+    document.write("偶數和"+evensum+"<br>");
+    
+</script>
+
+<h2>題目八</h2>
+<script>
+// @@@@@@@@作業08　08prizeFor.html (迴圈 for…, Math練習)  
+// 摸彩金 : 有11顆彩球, 彩球面額為0-10之間, 可以摸彩10次, 印出其每次的摸彩金額及 彩金總金額(單位:佰元)
+let lottoSum = 0;
+for(number=1; number<=10; number++){
+    let ball = Math.floor(Math.random()*11)*100;
+    document.write(ball+"<br>");
+    lottoSum += ball;
+}
+document.write(lottoSum);
+
+</script>
+
+<h2>題目九</h2>
+<script>
+// @@@@@@@@@作業9  9prize.html
+//  (迴圈, Math練習)  
+// 摸彩金 : 有11顆彩球, 彩球面額為0-10之間, 若摸到的彩球不為0,則可繼續摸彩,若摸到的彩球為0,則停止摸彩,並計算其摸彩次數及彩金總金額(單位:佰元)
+let lottoSumTwo = 0;
+let count = 0;
+let ballPrice;
+
+do{
+    count++;
+    ballPrice = Math.floor(Math.random()*11)*100
+    lottoSumTwo += ballPrice;
+}while(ballPrice !==0);
+
+document.write(count+"<br>"+lottoSumTwo);
+</script>
+
+
+
+<h2>題目十</h2>
+<script>
+// @@@@@@@@@作業10  10nestedLoopStar.html： (巢狀迴圈練習) 
+// 印出
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+var x = ""
+var y = "*"
+for(let i=1; i<=6 ; i++){
+    x = x + y;
+    document.write(x +"<br>");
+}
+</script>
+
+<script>
+    for(let x=1; x<=6; x++){
+        for(let y=1; y<=x ; y++){
+            document.write("*");
+        }
+        document.write("<br>");
+    }
+
+</script>
+
+
+
+<h2>題目十一</h2>
+<script>
+// @@@@@@@@@作業11  11nestedLoopStar.html： (巢狀迴圈練習)  
+// 印出
+
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *****
+// ****
+// ***
+// **
+// *
+for(let x=1;x<=6;x++){
+    for(let y=1; y<=x; y++){
+        document.write("*");
+    }
+    document.write("<br>");
+}
+for(let a=5;a>=1;a--){
+    for(let b=1;b<=a;b++){
+        document.write("*");
+    }
+    document.write("<br>");
+}
+
+</script>
+
+
+
+<h2>題目十二</h2>
+<script>
+// @@@@@@@@@作業12　12nestedLoop. html： (巢狀迴圈練習)  
+// 印出
+// 1
+// 12
+// 123
+// 1234
+// 12345
+// 123456
+
+// var y = "";
+// for(var x=1; x<=6; x++){
+//     y=y+x;
+// }
+// document.write(y);
+
+let a = "";
+for(let b=1; b<=6; b++){
+    a=a+b;
+    document.write(a+"<br>");
+}
+
+for(x=1;x<=6;x++){
+    for(y=1;y<=x;y++){
+        document.write(y);
+    }
+    document.write("<br>");
+}
+
+</script>
+
+<h2>題目十三</h2>
+<script>
+// @@@@@@@@@作業　13nestedLoopSum. html：(巢狀迴圈練習)  
+// 印出
+// 1=1
+// 1+2=3
+// 1+2+3=6
+// 1+2+3+4=10
+// …
+// 1+2+3+ ……+9=45
+// 1+2+3+ ……..+10=55
+
+var sum=0
+for(var n=1;n<=10;n++){
+    var p = ""
+    for(var k=1;k<=n;k++){
+        p = p + k;
+        if(k<n){
+            p = p + "+";
+        }
+    }
+    sum=sum+n;
+    document.write(p+"="+sum+"<br>");
+}
+</script>
+
+<h2>題目十四</h2>
+<script>
+// @@@@@@@@@作業14：14array.html (array練習) 
+// 隨機產生10個介於1~100之間的數放在陣列中, 
+// 印出這10個數, 總和 , 最小值 , 最大值
+let nums = [];
+
+for( let i=1;i<=10;i++){
+    let num = Math.floor(Math.random()*101);
+    nums.push(num);
+}
+
+document.write(nums +"<br>");
+document.write(Math.max(...nums)+"<br>");
+document.write(Math.min(...nums)+"<br>");
+
+var sum = 0;
+for (let j=0; j<nums.length; j++){
+    sum += nums[j];
+}
+document.write(sum+"<br>");
+</script>
+
+
+<h2>題目十五</h2>
+<script>
+// @@@@@@@@@作業 15 : 15lotto.html (Math，迴圈練習，陣列)  
+// 請寫一段JavaScript的程式,在網頁上隨機產生6個不重覆的大樂透數字(介於1..49之間的數字) 
+let lotto =[];
+for(let i=1; i<=6; i++){
+    let number = Math.floor(Math.random()*50);
+    if(!lotto.includes(number)){
+        lotto.push(number);
+    }
+    
+}
+document.write(lotto);
+</script>
+
+<h2>題目十六</h2>
+<script>
+// @@@@@@@@@作業16：16classmateArray. html (array, 迴圈練習) 
+// 以陣列存放3位同學的通訊資料, 並印出, 如下表: 
+let data =[
+    [94951001,"黃一丁","0911000333","中壢市中大路1號"+"<br>"],
+    [94951002,"劉二毛","0922999887","高雄市中山路2號"+"<br>"],
+    [94951003,"黃一丁","0933555779","台北市師大路3號"+"<br>"]
+];
+document.write(data);
+</script>
+
+
+<h2>題目十七</h2>
+<script>
+// @@@@@@@@@作業17 :  17rand. Html 
+// 請寫一個rand(min,max)函數,可以傳入min與max的整數,並回傳一個介於min和max間的整數值 (大於等於min,小於等於max)
+// (Math, 函式練習)
+function rand(min,max){
+    let mm;
+    do{
+        mm = Math.floor(Math.random()*max+1);
+        if(mm<=max && mm>=min){
+            return mm;
+        }        
+    } while(true);
+}
+document.write(rand(30,50)+"<br>");
+
+
+
+function random(min,max){
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random()*(max+1-min))+min;
+}
+document.write(random(30,50));
+</script>
+
+
+
+<h2>題目十八</h2>
+<script>
+//     @@@@@@@@@作業18 18generateCodes.html
+// 請寫一段JavaScript的程式,在網頁上隨機產生4~7個介於0..9之間不同顏色的數字(CSS,Math練習)
+// 先決定跑幾次
+let loop = rand(4,7);
+for(let i=1; i<=loop; i++){
+    //決定要出現的數字是什麼
+    let num = rand(0,9);
+    //決定要顯示的顏色是什麼
+    let r = rand(0,255);
+    let g = rand(0,255);
+    let b = rand(0,255);
+    //印出來
+    document.write(`<span style="color:rgb(${r},${g},${b})">${num}</span>`);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+ 
+
+
+
+
+</body>
+</html>
